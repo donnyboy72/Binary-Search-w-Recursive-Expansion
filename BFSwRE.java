@@ -1,3 +1,4 @@
+import java.util.Arrays;
 
 public class BFSwRE {
 
@@ -10,12 +11,10 @@ public class BFSwRE {
 				9, 9, 9, 10, 10, 10, 10
 			};
 		
-		int target = 5;
+		int target = 11;
 		int count = countOccurrences(arr,target);
-		System.out.println("Array: ");
-		
-		//delete this when I talk to the professor
-		System.out.println("Total number of " + target + "s in array is " + count);
+		System.out.println("Array: " + Arrays.toString(arr));
+		System.out.println("Total number of " + target + "'s in array is " + count);
 
 	}
 	
@@ -80,7 +79,7 @@ public class BFSwRE {
 		
 		if(index == arr.length-1)//checks to see if index is at the end of array
 		{
-			return 0;
+			return arr.length-1;
 		}
 		else if(arr[rightIndex] != target)//checks to see if right index is not equal to target
 		{
